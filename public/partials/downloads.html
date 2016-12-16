@@ -1,0 +1,28 @@
+<div class="page-container__home-body">
+  <ul ng-controller="downloadsController" class="page-container__home-body__form-list">
+    <li ng-repeat="card in cards" class="page-container__home-body__form-list__form-card">
+      <div class="page-container__home-body__form-list__form-card__card" ng-class="{'flipped':!card.isFlipped}">
+        <div ng-click="card.isFlipped=!card.isFlipped" class="page-container__home-body__form-list__form-card__card__front">
+          <div class="page-container__home-body__form-list__form-card__card__front__title">
+            <h3 class="page-container__home-body__form-list__form-card__card__front__title__text">{{ card.name }}</h3>
+          </div>
+          <p class="page-container__home-body__form-list__form-card__card__front__text">{{ card.summary }}</p>
+        </div>
+        <div class="page-container__home-body__form-list__form-card__card__back">
+          <div class="page-container__home-body__form-list__form-card__card__back__return">
+            <i ng-click="card.isFlipped=!card.isFlipped" class="page-container__home-body__form-list__form-card__card__back__return__link fa fa-mail-reply fa-2x"></i>
+          </div>
+          <div class="page-container__home-body__form-list__form-card__card__back__links">
+            <a ng-hide="!card.link1" class="page-container__home-body__form-list__form-card__card__back__links__link" href="{{ card.link1 }}"><button ng-hide="!card.link1" linkcopy class="page-container__home-body__form-list__form-card__card__back__links__link__button"><a href="{{ card.link1 }}">{{ card.link1Name }}</a></button></a>
+            <a ng-hide="!card.link2" class="page-container__home-body__form-list__form-card__card__back__links__link" href="{{ card.link2 }}"><button ng-hide="!card.link2" linkcopy class="page-container__home-body__form-list__form-card__card__back__links__link__button"><a href="{{ card.link2 }}">{{ card.link2Name }}</a></button></a>
+            <a ng-hide="!card.link3" class="page-container__home-body__form-list__form-card__card__back__links__link" href="{{ card.link3 }}"><button ng-hide="!card.link3" linkcopy class="page-container__home-body__form-list__form-card__card__back__links__link__button"><a href="{{ card.link3 }}">{{ card.link3Name }}</a></button></a>
+            <a ng-hide="!card.link4" class="page-container__home-body__form-list__form-card__card__back__links__link" href="{{ card.link4 }}"><button ng-hide="!card.link4" linkcopy class="page-container__home-body__form-list__form-card__card__back__links__link__button"><a href="{{ card.link4 }}">{{ card.link4Name }}</a></button></a>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+  <!-- <div class="page-container__home-body__download-button">
+    <span class="page-container__home-body__download-button__text">Downloads</span>
+  </div> -->
+</div>

@@ -1,0 +1,32 @@
+<fieldset class="form-container__form__fieldset">
+    <legend class="form-container__form__fieldset__heading"><h2>Licenses (if any)</h2></legend>
+    <section class="form-container__form__fieldset__section">
+        <div class="form-container__form__fieldset__section__field">
+            <label class="form-container__form__fieldset__section__field__label">License #:</label>
+            <input class="form-container__form__fieldset__section__field__input" type="text" required ng-model="formData.licenseNumber">
+        </div>
+        <div class="form-container__form__fieldset__section__field">
+            <label class="form-container__form__fieldset__section__field__label">Type:</label>
+            <input class="form-container__form__fieldset__section__field__input" type="text" required ng-model="formData.licenseType">
+        </div>
+        <div class="form-container__form__fieldset__section__field">
+            <label class="form-container__form__fieldset__section__field__label">State:</label>
+            <select class="form-container__form__fieldset__section__field__input" required ng-model="formData.state">
+                <option>select</option>
+            </select>
+        </div>
+        <div class="form-container__form__fieldset__section__field">
+            <label class="form-container__form__fieldset__section__field__label">Renewal Date:</label>
+            <input class="form-container__form__fieldset__section__field__input--date" type="date" required ng-model="formData.licenseRenewalDate">
+        </div>
+    </section>
+    <section class="form-container__form__fieldset__section">
+        <input class="form-container__form__fieldset__section__button" type="button" value="Add License">
+    </section>
+</fieldset>
+<fieldset class="form-container__form__fieldset">
+  <section class="form-container__form__fieldset__pagination-controls">
+      <a class="form-container__form__fieldset__pagination-controls__link" ui-sref="form.companystructure"><input class="form-container__form__fieldset__pagination-controls__link__button" type="button" value="Previous"></a>
+      <a class="form-container__form__fieldset__pagination-controls__link" ui-sref="form.confirmations"><input class="form-container__form__fieldset__pagination-controls__link__button" type="button" value="Continue"></a>
+  </section>
+</fieldset>

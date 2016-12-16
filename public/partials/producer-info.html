@@ -1,0 +1,19 @@
+<fieldset class="form-container__form__fieldset ng-scope">
+    <legend class="form-container__form__heading"><h2>Producer Information</h2></legend>
+    <section class="form-container__form__fieldset__section">
+      <div class="form-container__form__fieldset__section__field">
+        <label class="form-container__form__fieldset__section__field__label">Federal ID# or SSN:</label>
+        <input class="form-container__form__fieldset__section__field__input" type="text" required ng-model="formData.federalIDNumber">
+      </div>
+      <div class="form-container__form__fieldset__section__field">
+        <label class="form-container__form__fieldset__section__field__label">Number of Stores:</label>
+        <input class="form-container__form__fieldset__section__field__input" type="text" required ng-model="formData.numberOfStores" size="3">
+      </div>
+    </section>
+</fieldset>
+<fieldset class="form-container__form__fieldset">
+  <section class="form-container__form__fieldset__pagination-controls">
+      <a class="form-container__form__fieldset__pagination-controls__link" ui-sref="form.personnel"><input class="form-container__form__fieldset__pagination-controls__link__button" type="button" value="Previous"></a>
+      <a class="form-container__form__fieldset__pagination-controls__link" ui-sref="form.companystructure"><input class="form-container__form__fieldset__pagination-controls__link__button" type="button" value="Continue"></a>
+  </section>
+</fieldset>

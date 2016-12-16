@@ -1,0 +1,92 @@
+<fieldset class="form-container__form__fieldset">
+    <legend class="form-container__form__fieldset__heading"><h2>Dealer Information</h2></legend>
+    <section class="form-container__form__fieldset__section">
+        <div class="form-container__form__fieldset__section__field">
+            <label class="form-container__form__fieldset__section__field__label">Producer Number:</label>
+            <input class="form-container__form__fieldset__section__field__input" required ng-model="formData.producerNumber" type="text">
+        </div>
+    </section>
+    <section class="form-container__form__fieldset__section">
+        <div class="form-container__form__fieldset__section__field">
+            <label class="form-container__form__fieldset__section__field__label">Dealer Name:</label>
+            <input class="form-container__form__fieldset__section__field__input" type="text" required ng-model="formData.dealerName">
+        </div>
+        <div class="form-container__form__fieldset__section__field">
+            <label class="form-container__form__fieldset__section__field__label">Street Address:</label>
+            <input class="form-container__form__fieldset__section__field__input" type="text" required ng-model="formData.streetAddress">
+        </div>
+        <div class="form-container__form__fieldset__section__field">
+            <label class="form-container__form__fieldset__section__field__label">City:</label>
+            <input class="form-container__form__fieldset__section__field__input" type="text" required ng-model="formData.city">
+        </div>
+        <div class="form-container__form__fieldset__section__field">
+            <label class="form-container__form__fieldset__section__field__label">State:</label>
+            <select class="form-container__form__fieldset__section__field__input" required ng-model="formData.state">
+                <option>select</option>
+            </select>
+        </div>
+        <div class="form-container__form__fieldset__section__field">
+            <label class="form-container__form__fieldset__section__field__label">Zipcode:</label>
+            <input class="form-container__form__fieldset__section__field__input" type="text" required ng-model="formData.zipcode" size="9">
+        </div>
+        <div class="form-container__form__fieldset__section__field">
+            <label class="form-container__form__fieldset__section__field__label">Phone:</label>
+            <input class="form-container__form__fieldset__section__field__input" type="tel" required ng-model="formData.phone" size="10">
+        </div>
+        <div class="form-container__form__fieldset__section__field">
+            <label class="form-container__form__fieldset__section__field__label">Fax:</label>
+            <input class="form-container__form__fieldset__section__field__input" type="text" required ng-model="formData.fax" size="10">
+        </div>
+        <div class="form-container__form__fieldset__section__field">
+            <label class="form-container__form__fieldset__section__field__label">Email:</label>
+            <input class="form-container__form__fieldset__section__field__input" type="email" required ng-model="formData.email">
+        </div>
+        <div class="form-container__form__fieldset__section__field">
+            <label class="form-container__form__fieldset__section__field__label">Billing Attn:</label>
+            <input class="form-container__form__fieldset__section__field__input" type="text" required ng-model="formData.billingAttn">
+        </div>
+        <div class="form-container__form__fieldset__section__field">
+            <label class="form-container__form__fieldset__section__field__label">Default Number of Days:</label>
+            <input class="form-container__form__fieldset__section__field__input" type="text" required ng-model="formData.defaultDays" size="3">
+        </div>
+    </section>
+    <section class="form-container__form__fieldset__radiogroup">
+        <label class="form-container__form__fieldset__radiogroup__heading">Bill Frequency:</label>
+        <div class="form-container__form__fieldset__radiogroup__container">
+            <div radio class="form-container__form__fieldset__radiogroup__container__field">
+                <input class="form-container__form__fieldset__radiogroup__container__field__input" type="radio" ng-model="formData.billFrequency" value="Per Certificate of Insurance">
+                <label class="form-container__form__fieldset__radiogroup__container__field__label">Per Certificate of Insurance</label>
+            </div>
+            <div radio class="form-container__form__fieldset__radiogroup__container__field">
+                <input class="form-container__form__fieldset__radiogroup__container__field__input" type="radio" ng-model="formData.billFrequency" value="daily">
+                <label class="form-container__form__fieldset__radiogroup__container__field__label">Daily</label>
+            </div>
+            <div radio class="form-container__form__fieldset__radiogroup__container__field">
+                <input class="form-container__form__fieldset__radiogroup__container__field__input" type="radio" ng-model="formData.billFrequency" value="bi-weekly">
+                <label class="form-container__form__fieldset__radiogroup__container__field__label">Bi-Weekly</label>
+            </div>
+            <div radio class="form-container__form__fieldset__radiogroup__container__field">
+                <input class="form-container__form__fieldset__radiogroup__container__field__input" type="radio" ng-model="formData.billFrequency" value="montly">
+                <label class="form-container__form__fieldset__radiogroup__container__field__label">Monthly</label>
+            </div>
+        </div>
+    </section>
+    <section class="form-container__form__fieldset__radiogroup">
+        <label class="form-container__form__fieldset__radiogroup__heading">Franchise Dealership:</label>
+        <div class="form-container__form__fieldset__radiogroup__container">
+          <div radio class="form-container__form__fieldset__radiogroup__container__field">
+            <input class="form-container__form__fieldset__radiogroup__container__field__input" type="radio" ng-model="formData.franchiseDealership" value="yes">
+            <label class="form-container__form__fieldset__radiogroup__container__field__label">Yes</label>
+          </div>
+          <div radio class="form-container__form__fieldset__radiogroup__container__field">
+            <input class="form-container__form__fieldset__radiogroup__container__field__input" type="radio" ng-model="formData.franchiseDealership" value="no">
+            <label class="form-container__form__fieldset__radiogroup__container__field__label">No</label>
+          </div>
+        </div>
+    </section>
+</fieldset>
+<fieldset class="form-container__form__fieldset">
+  <section class="form-container__form__fieldset__pagination-controls">
+      <a class="form-container__form__fieldset__pagination-controls__link" ui-sref="form.personnel"><input class="form-container__form__fieldset__pagination-controls__link__button" type="button" value="Continue"></a>
+  </section>
+</fieldset>

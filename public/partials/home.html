@@ -1,0 +1,28 @@
+<div class="page-container__home-body">
+  <ul ng-controller="flipController" class="page-container__home-body__form-list">
+    <li ng-repeat="card in cards" class="page-container__home-body__form-list__form-card">
+      <div class="page-container__home-body__form-list__form-card__card" ng-class="{'flipped':!card.isFlipped}">
+        <div ng-click="card.isFlipped=!card.isFlipped" class="page-container__home-body__form-list__form-card__card__front">
+          <div class="page-container__home-body__form-list__form-card__card__front__title">
+            <h3 class="page-container__home-body__form-list__form-card__card__front__title__text">{{ card.name }}</h3>
+          </div>
+          <p class="page-container__home-body__form-list__form-card__card__front__text">{{ card.summary }}</p>
+        </div>
+        <div class="page-container__home-body__form-list__form-card__card__back">
+          <div class="page-container__home-body__form-list__form-card__card__back__return">
+            <i ng-click="card.isFlipped=!card.isFlipped" class="page-container__home-body__form-list__form-card__card__back__return__link fa fa-mail-reply fa-2x"></i>
+          </div>
+          <div class="page-container__home-body__form-list__form-card__card__back__links">
+            <a ng-hide="!card.programInfo" class="page-container__home-body__form-list__form-card__card__back__links__link" href="{{ card.programInfo }}"><span ng-hide="!card.programInfo" linkcopy class="page-container__home-body__form-list__form-card__card__back__links__link__button">Program Info</span></a>
+            <a ng-hide="!card.application" class="page-container__home-body__form-list__form-card__card__back__links__link" href="{{ card.application }}"><span ng-hide="!card.application" linkcopy class="page-container__home-body__form-list__form-card__card__back__links__link__button">Application</span></a>
+            <a ng-hide="!card.brochure" class="page-container__home-body__form-list__form-card__card__back__links__link" href="{{ card.brochure }}"><span ng-hide="!card.brochure" linkcopy class="page-container__home-body__form-list__form-card__card__back__links__link__button">Brochure</span</a>
+            <a ng-hide="!card.videos" class="page-container__home-body__form-list__form-card__card__back__links__link" href="{{ card.brochure }}"><span ng-hide="!card.videos" linkcopy class="page-container__home-body__form-list__form-card__card__back__links__link__button">Powerpoint</span></a>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+  <!-- <div class="page-container__home-body__download-button">
+    <span class="page-container__home-body__download-button__text">Downloads</span>
+  </div> -->
+</div>

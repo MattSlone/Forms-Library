@@ -1,0 +1,90 @@
+<html ng-app="fairForms">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="initial-scale=1.0">
+
+        <link rel="stylesheet" type="text/css" href="/public/css/styles.css">
+        <link rel="stylesheet" type="text/css" href="/public/css/font-awesome.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
+        <!-- Angular -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.min.js"></script>
+
+        <base href="/">
+    </head>
+    <body>
+      <div class="page-container">
+        <header class="page-container__header">
+          <img class="page-container__header__img" src="/public/img/logo.png">
+          <div class="page-container__header__side-container">
+            <div class="page-container__header__side-container__phone">
+              <span class="page-container__header__side-container__phone__label">PHONE: </span>
+              <span class="page-container__header__side-container__phone__text">844-FAIR-LLC</span>
+            </div>
+            <div class="page-container__header__side-container__social-links">
+              <a class="page-container__header__side-container__social-links__link" href="https://www.facebook.com/njfairllc"><i class="fa fa-facebook fa-2x"></i></a>
+              <a class="page-container__header__side-container__social-links__link" href="https://twitter.com/finance_insres"><i class="fa fa-twitter fa-2x"></i></a>
+              <a class="page-container__header__side-container__social-links__link" href="https://www.linkedin.com/company/fair-holdings-llc"><i class="fa fa-linkedin fa-2x"></i></a>
+            </div>
+          </div>
+        </header>
+        <nav class="page-container__mobile-nav" ng-class="{'closed':!openMenu}">
+          <ul class="page-container__mobile-nav__list" ng-class="{'closed':!openMenu}" ng-click="openMenu=!openMenu">
+            <li class="page-container__mobile-nav__list__item">
+              <i class="page-container__mobile-nav__list__item__hamburger fa-mobile-nav fa-bars fa-burger"></i>
+              <span class="page-container__mobile-nav__list__item__text">
+                MENU
+              </span>
+            </li>
+          </ul>
+        </nav>
+        <nav class="page-container__nav" ng-class="{'closed':!openMenu}">
+          <ul class="page-container__nav__list">
+            <li class="page-container__nav__list__item--outside__left">
+              <a href="/forms" class="page-container__nav__list__item--outside__left__link">
+                HOME
+              </a>
+            </li>
+            <li class="page-container__nav__list__item">
+              <a href="http://fairllc.com/about" target="_blank" class="page-container__nav__list__item__link">
+                ABOUT
+              </a>
+            </li>
+            <li class="page-container__nav__list__item">
+              <a href="/forms/downloads" class="page-container__nav__list__item__link">
+                DOWNLOADS
+              </a>
+            </li>
+            <li class="page-container__nav__list__item">
+              <a href="/form/start" class="page-container__nav__list__item__link">
+                TEST FORM
+              </a>
+            </li>
+            <li class="page-container__nav__list__item--outside__right">
+              <a href="http://fairllc.com/contact" target="_blank" class="page-container__nav__list__item--outside__right__link">
+                CONTACT
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div ui-view></div>
+        <div class="page-container__footer">
+          <div class="page-container__footer__container">
+            <img class="page-container__footer__container__img" src="http://www.demotesturl.com/fairllc/wp-content/themes/twentyfifteen-child/images/logo2.png">
+            <div class="page-container__footer__container__contact">
+              <div ng-controller="contactController" class="page-container__footer__container__contact__top">
+                <span ng-repeat="info in contactInfo" class="page-container__footer__container__contact__top__text">{{ info.text }}</span>
+              </div>
+              <hr class="page-container__footer__container__contact__divider">
+              <ul ng-controller="cityController" class="page-container__footer__container__contact__bottom">
+                <li ng-repeat="city in cities" class="page-container__footer__container__contact__bottom__text">{{ city.text }}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+        <script src="/public/js/app.js"></script>
+    </body>
+</html>

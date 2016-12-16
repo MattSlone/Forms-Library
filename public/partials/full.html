@@ -1,0 +1,62 @@
+<div ui-view=".dealerinfo"></div>
+<fieldset class="form-container__form__fieldset">
+    <legend class="form-container__form__fieldset__heading"><h2>Company Structure:</h2></legend>
+    <section class="form-container__form__fieldset__radiogroup">
+        <div class="form-container__form__fieldset__radiogroup__container">
+            <div radio class="form-container__form__fieldset__radiogroup__container__field">
+                <input class="form-container__form__fieldset__radiogroup__container__field__input" type="radio" name="companyStructure" value="Sole Proprietor">
+                <label class="form-container__form__fieldset__radiogroup__container__field__label">Sole Proprietor</label>
+            </div>
+            <div radio class="form-container__form__fieldset__radiogroup__container__field">
+                <input class="form-container__form__fieldset__radiogroup__container__field__input" type="radio" name="companyStructure" value="Partnership">
+                <label class="form-container__form__fieldset__radiogroup__container__field__label">Partnership</label>
+            </div>
+            <div radio class="form-container__form__fieldset__radiogroup__container__field--last">
+                <input class="form-container__form__fieldset__radiogroup__container__field__input" type="radio" name="companyStructure" value="Other">
+                <label class="form-container__form__fieldset__radiogroup__container__field__label">Other</label>
+            </div>
+        </div>
+    </section>
+</fieldset>
+<fieldset class="form-container__form__fieldset">
+    <legend class="form-container__form__fieldset__heading"><h2>Licenses (if any)</h2></legend>
+    <section class="form-container__form__fieldset__section">
+        <div class="form-container__form__fieldset__section__field">
+            <label class="form-container__form__fieldset__section__field__label">License #:</label>
+            <input class="form-container__form__fieldset__section__field__input" type="text" name="licenseNumber">
+        </div>
+        <div class="form-container__form__fieldset__section__field">
+            <label class="form-container__form__fieldset__section__field__label">Type:</label>
+            <input class="form-container__form__fieldset__section__field__input" type="text" name="licenseType">
+        </div>
+        <div class="form-container__form__fieldset__section__field">
+            <label class="form-container__form__fieldset__section__field__label">State:</label>
+            <select class="form-container__form__fieldset__section__field__input" name="state">
+                <option>select</option>
+            </select>
+        </div>
+        <div class="form-container__form__fieldset__section__field">
+            <label class="form-container__form__fieldset__section__field__label">Renewal Date:</label>
+            <input class="form-container__form__fieldset__section__field__input--date" type="date" name="licenseRenewalDate">
+        </div>
+    </section>
+    <section class="form-container__form__fieldset__section">
+        <input class="form-container__form__fieldset__section__button" type="button" value="Add License">
+    </section>
+</fieldset>
+<fieldset class="form-container__form__fieldset">
+    <legend class="form-container__form__fieldset__heading"><h2>Send Confirmations To:</h2></legend>
+    <section class="form-container__form__fieldset__section">
+        <div class="form-container__form__fieldset__section__field">
+            <input class="form-container__form__fieldset__section__field__input" type="text" name="confirmation1">
+        </div>
+    </section>
+    <section class="form-container__form__fieldset__section">
+        <input class="form-container__form__fieldset__section__button" type="button" value="Add Recipient">
+    </section>
+</fieldset>
+<fieldset class="form-container__form__fieldset">
+  <section class="form-container__form__fieldset__section">
+      <input class="form-container__form__fieldset__section__button--submit" type="submit" value="Submit Application" name="submitApplication">
+  </section>
+</fieldset>

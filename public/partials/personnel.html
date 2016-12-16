@@ -1,0 +1,27 @@
+<fieldset class="form-container__form__fieldset">
+    <legend class="form-container__form__heading"><h2>Key Dealer Personnel</h2></legend>
+    <section class="form-container__form__fieldset__section">
+        <div class="form-container__form__fieldset__section__field">
+            <label class="form-container__form__fieldset__section__field__label">Principal / Owner:</label>
+            <input class="form-container__form__fieldset__section__field__input" type="text" required ng-model="formData.principalOwner">
+        </div>
+        <div class="form-container__form__fieldset__section__field">
+            <label class="form-container__form__fieldset__section__field__label">General Manager:</label>
+            <input class="form-container__form__fieldset__section__field__input" type="text" required ng-model="formData.generalManager">
+        </div>
+        <div class="form-container__form__fieldset__section__field">
+            <label class="form-container__form__fieldset__section__field__label">Sales Manager:</label>
+            <input class="form-container__form__fieldset__section__field__input" type="text" required ng-model="formData.salesManager">
+        </div>
+        <div class="form-container__form__fieldset__section__field">
+            <label class="form-container__form__fieldset__section__field__label">Service Manager:</label>
+            <input class="form-container__form__fieldset__section__field__input" type="text" required ng-model="formData.serviceManager">
+        </div>
+    </section>
+</fieldset>
+<fieldset class="form-container__form__fieldset">
+  <section class="form-container__form__fieldset__pagination-controls">
+      <a class="form-container__form__fieldset__pagination-controls__link" ui-sref="form.dealerinfo"><input class="form-container__form__fieldset__pagination-controls__link__button" type="button" value="Previous"></a>
+      <a class="form-container__form__fieldset__pagination-controls__link" ui-sref="form.producerinfo"><input class="form-container__form__fieldset__pagination-controls__link__button" type="button" value="Continue"></a>
+  </section>
+</fieldset>

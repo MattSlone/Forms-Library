@@ -1,0 +1,25 @@
+<fieldset class="form-container__form__fieldset">
+    <legend class="form-container__form__fieldset__heading"><h2>Company Structure:</h2></legend>
+    <section class="form-container__form__fieldset__radiogroup">
+        <div class="form-container__form__fieldset__radiogroup__container">
+            <div radio class="form-container__form__fieldset__radiogroup__container__field">
+                <input class="form-container__form__fieldset__radiogroup__container__field__input" type="radio" ng-model="formData.companyStructure" value="Sole Proprietor">
+                <label class="form-container__form__fieldset__radiogroup__container__field__label">Sole Proprietor</label>
+            </div>
+            <div radio class="form-container__form__fieldset__radiogroup__container__field">
+                <input class="form-container__form__fieldset__radiogroup__container__field__input" type="radio" ng-model="formData.companyStructure" value="Partnership">
+                <label class="form-container__form__fieldset__radiogroup__container__field__label">Partnership</label>
+            </div>
+            <div radio class="form-container__form__fieldset__radiogroup__container__field--last">
+                <input class="form-container__form__fieldset__radiogroup__container__field__input" type="radio" ng-model="formData.companyStructure" value="Other">
+                <label class="form-container__form__fieldset__radiogroup__container__field__label">Other</label>
+            </div>
+        </div>
+    </section>
+</fieldset>
+<fieldset class="form-container__form__fieldset">
+  <section class="form-container__form__fieldset__pagination-controls">
+      <a class="form-container__form__fieldset__pagination-controls__link" ui-sref="form.producerinfo"><input class="form-container__form__fieldset__pagination-controls__link__button" type="button" value="Previous"></a>
+      <a class="form-container__form__fieldset__pagination-controls__link" ui-sref="form.licenses"><input class="form-container__form__fieldset__pagination-controls__link__button" type="button" value="Continue"></a>
+  </section>
+</fieldset>
